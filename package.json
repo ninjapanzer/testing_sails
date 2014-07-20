@@ -1,0 +1,28 @@
+{
+  "name": "testing-sails",
+  "version": "0.0.1",
+  "description": "Something to test the world of sails",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninjapanzer/testing_sails"
+  },
+  "keywords": [
+    "sails",
+    "node",
+    "hack"
+  ],
+  "author": "Paul Scarrone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ninjapanzer/testing_sails/issues"
+  },
+  "homepage": "https://github.com/ninjapanzer/testing_sails",
+  "dependencies": {
+    "sails": "^0.9.16",
+    "waterlock": "0.0.10"
+  }
+}
