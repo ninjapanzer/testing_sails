@@ -19,7 +19,6 @@ module.exports = {
     
   
   bunn: function(req, res) {
-    console.log(res.viewExists);
     res.view();
   },
 
