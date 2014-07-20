@@ -23,6 +23,7 @@
   "homepage": "https://github.com/ninjapanzer/testing_sails",
   "dependencies": {
     "sails": "^0.9.16",
-    "waterlock": "0.0.10"
+    "waterlock": "0.0.10",
+    "protractor": "^1.0.0-rc6"
   }
 }
