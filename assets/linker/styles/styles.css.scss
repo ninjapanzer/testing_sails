@@ -6,11 +6,17 @@ section{
   &.top{
     @include outer-container;
   }
+  &.content{
+    @include outer-container;
+    @include span-columns(8);
+    @include shift(1);
+  }
 }
 
 .title{
   @include span-columns(4);
   @include shift(3);
+  @include omega;
   background: gray;
   text-align: center;
 }
