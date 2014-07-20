@@ -1,4 +1,4 @@
-!!!
+doctype
 html
   head
     title= title
@@ -8,11 +8,21 @@ html
 
     block styles
 
+    // SCRIPTS
+    
+    // SCRIPTS END
+
+    // STYLES
+    link(rel="stylesheet", href="/linker/styles/reset.css")
+    link(rel="stylesheet", href="/linker/styles/styles.css")
+    // STYLES END
+
   body
-    block body
+    section.top
+      block body
 
     // A few key dependencies, linked in order
-
+    
     // Bring in the socket.io client
     script(type="text/javascript", src="/js/socket.io.js")
 
