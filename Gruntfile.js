@@ -28,9 +28,7 @@ module.exports = function (grunt) {
    * dependencies, e.g. `npm install grunt-contrib-sass`
    */
 
-  var neat = require("node-neat");
   var cssFilesToInject = [];
-  cssFilesToInject = cssFilesToInject.concat(neat.includePaths);
   cssFilesToInject = [
     'linker/**/*.css'
   ];
@@ -209,7 +207,8 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         options: {
-          style: 'expanded' //Set your prefered style for development here.
+          style: 'expanded', //Set your prefered style for development here.
+          loadPath: require('node-neat').includePaths
         },
         files: [{
           expand: true,
@@ -288,7 +287,7 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/**/*.html': jsFilesToInject,
           'views/**/*.html': jsFilesToInject,
-          'views/**/*.ejs': jsFilesToInject
+          'views/**/*.jade': jsFilesToInject
         }
       },
 
@@ -302,7 +301,7 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/**/*.html': ['.tmp/public/min/production.js'],
           'views/**/*.html': ['.tmp/public/min/production.js'],
-          'views/**/*.ejs': ['.tmp/public/min/production.js']
+          'views/**/*.jade': ['.tmp/public/min/production.js']
         }
       },
 
@@ -318,7 +317,7 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/**/*.html': cssFilesToInject,
           'views/**/*.html': cssFilesToInject,
-          'views/**/*.ejs': cssFilesToInject
+          'views/**/*.jade': cssFilesToInject
         }
       },
 
@@ -332,7 +331,7 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/index.html': ['.tmp/public/min/production.css'],
           'views/**/*.html': ['.tmp/public/min/production.css'],
-          'views/**/*.ejs': ['.tmp/public/min/production.css']
+          'views/**/*.jade': ['.tmp/public/min/production.css']
         }
       },
 
@@ -347,7 +346,7 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/index.html': ['.tmp/public/jst.js'],
           'views/**/*.html': ['.tmp/public/jst.js'],
-          'views/**/*.ejs': ['.tmp/public/jst.js']
+          'views/**/*.jade': ['.tmp/public/jst.js']
         }
       },
 
